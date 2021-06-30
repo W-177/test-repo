@@ -1,0 +1,61 @@
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="application/javascript">
+
+            function checkdata()
+            {
+
+                var username = document.getElementById("name");
+                var useremail = document.getElementById("email");
+
+
+                if(username.value == "")
+                {
+                    alert("Please enter the name");
+                    username.focus();
+                    return false;
+                }
+
+
+                if(useremail.value == "")
+                {
+                    alert("Please enter the name");
+                    useremail.focus();
+                    return false;
+                }
+
+                alert("Form validation is successful.");
+
+                return true;
+                
+            }
+            
+        </script>
+        
+        <title> Registration Form </title>
+        
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form id="form1" onsubmit="return checkdata()">
+     
+            <label for="name"></label>
+            <input type="text" id="name" name="name">
+            
+            <br><br>
+            
+            <label for="email"></label>
+            <input type="email" id="email" name="email">
+            
+            <br><br>
+            
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+      
+        </form>
+    </body>
+</html>
+
